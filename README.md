@@ -23,6 +23,7 @@ apptainer shell --writable --fakeroot almalinux9-nestdaq
 
 ```
 cd /root
+```
 ここで自分のホームディレクトリに移動するので
 適当にsrcとかいうディレクトリを作ってそのなかで
 このリポジトリをcloneしておく
