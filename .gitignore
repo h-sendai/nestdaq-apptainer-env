@@ -1,0 +1,12 @@
+FairLogger
+FairMQ
+RedisTimeSeries
+boost
+cmake-3.25.0
+fmt
+hiredis
+libzmq
+nestdaq
+redis
+redis-plus-plus
+cmake-*.tar.gz
