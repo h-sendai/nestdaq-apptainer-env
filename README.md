@@ -35,3 +35,10 @@ cd nestdaq-apptainer-env
 ./all
 ```
 とするとよい（のではないか）。
+
+## 準備後の確認
+
+- https://github.com/spadi-alliance/nestdaq-user-impl
+- https://github.com/igalashi/userworks
+
+のプログラムがコンパイル可能かどうか確認する。
