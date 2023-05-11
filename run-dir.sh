@@ -14,23 +14,22 @@ cd $HOME/run
 
 cat <<EOF > nestdaq.sh
 #!/bin/sh
-source /opt/rh/devtoolset-8/enable
-export NESTDAQ=$HOME/nestdaq
+# source /opt/rh/devtoolset-8/enable
+export NESTDAQ=\$HOME/nestdaq
 export PATH=/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin
-export PATH=/opt/rh/devtoolset-8/root/usr/bin:$PATH
-export PATH=$HOME/.local/bin:$HOME/bin:$PATH
-export PATH=$NESTDAQ/bin:$PATH
+export PATH=/opt/rh/devtoolset-8/root/usr/bin:\$PATH
+export PATH=\$HOME/.local/bin:\$HOME/bin:\$PATH
+export PATH=\$NESTDAQ/bin:\$PATH
 EOF
 
 # redis 起動ファイル init.sh
 
 cat <<EOF > init.sh
 #!/bin/sh
-redis-server $NESTDAQ/etc/redis.conf --loadmodule $NESTDAQ/lib/redistimeseries.so
+redis-server \$NESTDAQ/etc/redis.conf --loadmodule \$NESTDAQ/lib/redistimeseries.so
 RIHOST=0.0.0.0 redisinsight-linux64 &
-daq-webctl >& $NESTDAQ/log/daq-webctl.log &
+daq-webctl >& \$NESTDAQ/log/daq-webctl.log &
 EOF
-
 chmod +x ./init.sh
 chmod +x ./nestdaq.sh
 
