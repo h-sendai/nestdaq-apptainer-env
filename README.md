@@ -38,7 +38,34 @@ cd nestdaq-apptainer-env
 
 ## 準備後の確認
 
-- https://github.com/spadi-alliance/nestdaq-user-impl
-- https://github.com/igalashi/userworks
+sifファイルに固定して確認する。
 
-のプログラムがコンパイル可能かどうか確認する。
+```
+apptainer build --fakeroot almalinux9-nestdaq.sif almalinux9-nestdaq
+```
+これでalmalinux9-nestdaq.sifができるので起動してみる:
+```
+apptainer shell almalinux9-nestdaq.sif
+```
+
+これで/home/youにホームディレクトリがマウントされている状態になっているので
+適当なディレクトリを作って以下のテストを行う。
+
+### nestdaq-user-implコンパイルテスト
+
+ソースは
+https://github.com/spadi-alliance/nestdaq-user-impl
+にある。
+
+- git clone https://github.com/spadi-alliance/nestdaq-user-impl.git
+- cd nestdaq-user-impl
+- cmake -DCMAKE_INSTALL_PREFIX=/home/nestdaq/nestdaq -B build -S .
+- cd build
+- make
+- make install
+
+### igalashi/userworksコンパイルテスト
+
+ソースは
+https://github.com/igalashi/userworks
+にある。
