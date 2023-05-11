@@ -69,3 +69,10 @@ https://github.com/spadi-alliance/nestdaq-user-impl
 ソースは
 https://github.com/igalashi/userworks
 にある。
+
+- git clone https://github.com/igalashi/userworks.git
+- cd userworks
+- cmake -DCMAKE_INSTALL_PREFIX=/home/nestdaq/nestdaq -B build -S .
+- cd build
+- make
+- make install
