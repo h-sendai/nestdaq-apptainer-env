@@ -32,7 +32,7 @@ mkdir src
 cd src
 git clone https://github.com/h-sendai/nestdaq-apptainer-env.git
 cd nestdaq-apptainer-env
-./all
+./all.sh
 ```
 とするとよい（のではないか）。
 
