@@ -24,20 +24,20 @@ remove_sources()
     rm -f  cmake-*.tar.gz
 }
 
-#remove_sources
-#make_home
+remove_sources
+make_home
 
-#./redis.sh
-#./redis-setup.sh
-#./RedisTimeSeries.sh
-#./boost.sh
-#./cmake.sh
-#./ZeroMQ.sh
-#./fmtlib.sh
-#./FairLogger.sh
-#./FairMQ.sh
-#./hiredis.sh
-#./redis-plus-plus.sh
-#./nestdaq.sh
-#./redisinsight.sh
+./redis.sh
+./redis-setup.sh
+./RedisTimeSeries.sh
+./boost.sh
+./cmake.sh
+./ZeroMQ.sh
+./fmtlib.sh
+./FairLogger.sh
+./FairMQ.sh
+./hiredis.sh
+./redis-plus-plus.sh
+./nestdaq.sh
+./redisinsight.sh
 ./run-dir.sh
