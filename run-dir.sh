@@ -5,7 +5,6 @@ HOME=/home/nestdaq
 cp -r nestdaq $HOME/nestdaq/src
 rm -fr FairMQ
 git clone https://github.com/FairRootGroup/FairMQ.git
-rm -fr FairMQ/.git
 cp -r FairMQ $HOME/nestdaq/src
 # ソースのコピー終了
 
