@@ -2,10 +2,11 @@
 
 apptainerコンテナにnestdaq開発環境をセットする。
 
+## OSの準備
+
 ファイル
 
 - almalinux9-nestdaq.def
-- all.sh
 
 ```
 apptainer build --sandbox almalinux9-nestdaq almalinux9-nestdaq.def
@@ -13,6 +14,31 @@ apptainer build --sandbox almalinux9-nestdaq almalinux9-nestdaq.def
 
 でalmalinux9-nestdaqというディレクトリができ、そのなかに
 AlmaLinux 9の開発環境がセットされる。
+
+### ROOT全部入り
+
+ROOTのrpmパッケージはEPELにある。
+100以上のパッケージに分割されている。
+一括してインストールするにはCRBリポジトリ（CodeReady Linux Builder。
+Red Hatが決めた開発者用追加パッケージリポジトリ）を有効にしておく
+必要がある。
+
+```
+dnf install epel-release
+dnf update epel-release
+dnf config-manager --enable crb
+dnf -y install root 'root-*'
+```
+
+今後CRBリポジトリを使わない場合はdnf install時に
+``--enablerepo``を付けて
+
+```
+dnf -y --enablerepo=crb install root 'root-*'
+```
+とする手もある。
+
+## nestdaqのセットアップ
 
 ```
 apptainer shell --writable --fakeroot almalinux9-nestdaq
