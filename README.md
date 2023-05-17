@@ -15,7 +15,7 @@ apptainer build --sandbox almalinux9-nestdaq almalinux9-nestdaq.def
 でalmalinux9-nestdaqというディレクトリができ、そのなかに
 AlmaLinux 9の開発環境がセットされる。
 
-### ROOT全部入り
+### ROOTパッケージ全部インストール
 
 ROOTのrpmパッケージはEPELにある。
 100以上のパッケージに分割されている。
