@@ -1,11 +1,11 @@
 #!/bin/sh
 
-HOME=/home/nestdaq
+HOME=/opt/nestdaq
 
 make_home()
 {
     mkdir -p $HOME
-    mkdir -p $HOME/nestdaq/{bin,etc,lib,lib64,share,src}
+    mkdir -p $HOME/{bin,etc,lib,lib64,share,src}
 }
 
 remove_sources()

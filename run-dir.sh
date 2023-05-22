@@ -1,11 +1,11 @@
-HOME=/home/nestdaq
+HOME=/opt/nestdaq
 
 # ソースのコピー
 # とりあえずnestdaqソースはコンテナ内にコピーしておく。
-cp -r nestdaq $HOME/nestdaq/src
+cp -r nestdaq $HOME/src
 rm -fr FairMQ
 git clone https://github.com/FairRootGroup/FairMQ.git
-cp -r FairMQ $HOME/nestdaq/src
+cp -r FairMQ $HOME/src
 # ソースのコピー終了
 
 # runディレクトリの作成
@@ -18,7 +18,7 @@ cd $HOME/run
 cat <<EOF > nestdaq.sh
 #!/bin/sh
 # source /opt/rh/devtoolset-8/enable
-export NESTDAQ=\$HOME/nestdaq
+export NESTDAQ=\$HOME
 export PATH=/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin
 export PATH=/opt/rh/devtoolset-8/root/usr/bin:\$PATH
 export PATH=\$HOME/.local/bin:\$HOME/bin:\$PATH
@@ -38,5 +38,5 @@ chmod +x ./nestdaq.sh
 
 #task 起動ファイルなどを symbolic link しておく。
 
-NESTDAQ=$HOME/nestdaq
+NESTDAQ=$HOME
 ln -s $NESTDAQ/scripts/*.sh .

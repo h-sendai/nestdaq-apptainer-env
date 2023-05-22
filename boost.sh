@@ -1,4 +1,4 @@
-HOME=/home/nestdaq
+HOME=/opt/nestdaq
 git clone https://github.com/boostorg/boost.git
 cd boost
 git checkout -b boost-1.80.0 boost-1.80.0
@@ -11,4 +11,4 @@ cxxstd=17 \
 variant=release,debug \
 --layout=tagged \
 -j6 \
---prefix=$HOME/nestdaq
+--prefix=$HOME

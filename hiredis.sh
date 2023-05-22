@@ -1,4 +1,4 @@
-HOME=/home/nestdaq
+HOME=/opt/nestdaq
 git clone https://github.com/redis/hiredis.git
 cd hiredis
-make PREFIX=$HOME/nestdaq install
+make PREFIX=$HOME install
