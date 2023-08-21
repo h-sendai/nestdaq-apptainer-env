@@ -85,7 +85,7 @@ https://github.com/spadi-alliance/nestdaq-user-impl
 
 - git clone https://github.com/spadi-alliance/nestdaq-user-impl.git
 - cd nestdaq-user-impl
-- cmake -DCMAKE_INSTALL_PREFIX=/home/nestdaq/nestdaq -B build -S .
+- cmake -DCMAKE_INSTALL_PREFIX=/opt/nestdaq -B build -S .
 - cd build
 - make
 - make install
@@ -98,7 +98,7 @@ https://github.com/igalashi/userworks
 
 - git clone https://github.com/igalashi/userworks.git
 - cd userworks
-- cmake -DCMAKE_INSTALL_PREFIX=/home/nestdaq/nestdaq -B build -S .
+- cmake -DCMAKE_INSTALL_PREFIX=/opt/nestdaq -B build -S .
 - cd build
 - make
 - make install
