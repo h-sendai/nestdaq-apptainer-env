@@ -1,5 +1,7 @@
 #!/bin/sh
 
+set -e
+
 HOME=/opt/nestdaq
 
 make_home()

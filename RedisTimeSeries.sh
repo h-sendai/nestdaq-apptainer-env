@@ -1,3 +1,7 @@
+#!/bin/sh
+
+set -e
+
 HOME=/opt/nestdaq
 git clone --recursive https://github.com/RedisTimeSeries/RedisTimeSeries.git
 cd RedisTimeSeries

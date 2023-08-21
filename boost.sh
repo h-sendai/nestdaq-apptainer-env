@@ -1,3 +1,7 @@
+#!/bin/sh
+
+set -e
+
 HOME=/opt/nestdaq
 git clone https://github.com/boostorg/boost.git
 cd boost

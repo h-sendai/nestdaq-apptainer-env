@@ -1,3 +1,7 @@
+#!/bin/sh
+
+set -e
+
 HOME=/opt/nestdaq
 git clone https://github.com/sewenew/redis-plus-plus.git
 cd redis-plus-plus
