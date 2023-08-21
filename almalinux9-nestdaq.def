@@ -10,7 +10,7 @@ Include: yum
 %post
     echo "Hello from inside the container"
     yum -y groupinstall 'Minimal Install' 'Development Tools'
-    yum -y install vim zsh rpmdevtools iputils nmap-ncat telnet jq wget openssl-devel python3-pip python3-devel bzip2-devel tmux procps-ng iperf3
+    yum -y install vim zsh rpmdevtools iputils nmap-ncat telnet jq wget openssl-devel python3-pip python3-devel bzip2-devel tmux procps-ng iperf3 xterm emacs
     yum -y install epel-release
     yum -y update epel-release
     yum -y install screen htop 
