@@ -40,6 +40,10 @@ dnf -y --enablerepo=crb install root 'root-*'
 
 ## nestdaqのセットアップ
 
+nestdaqのセットアップ手順書は
+https://docs.google.com/document/d/1LXQejEye76UJv8ahEP6n4tAMXi1fC9YXGf0zSLDs3NI/edit#
+にある。
+
 ```
 apptainer shell --writable --fakeroot almalinux9-nestdaq
 ```
