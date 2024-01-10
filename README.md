@@ -85,14 +85,34 @@ apptainer shell almalinux9-nestdaq.sif
 
 ソースは
 https://github.com/spadi-alliance/nestdaq-user-impl
-にある。
+にある。ROOTとuhbookが必要と書いてある。uhbookは下のコマンドで
+git cloneしている。
 
-- git clone https://github.com/spadi-alliance/nestdaq-user-impl.git
-- cd nestdaq-user-impl
-- cmake -DCMAKE_INSTALL_PREFIX=/opt/nestdaq -B build -S .
-- cd build
-- make
-- make install
+上のnestdaq-user-implにあるビルドスクリプトを参考に下の
+コマンドを実行する。$HOME/nestdaq以下に実行ファイルが
+入るのでlddコマンドでライブラリがリンクされるかどうか確認する。
+
+```
+# $HOME: /home/username
+
+cd $HOME/src
+
+rm -fr uhbook nestdaq-user-impl
+rm -fr $HOME/nestdaq
+
+mkdir -p $HOME/nestdaq
+git clone https://github.com/spadi-alliance/uhbook
+git clone https://github.com/spadi-alliance/nestdaq-user-impl
+
+cd nestdaq-user-impl
+
+cmake  -DCMAKE_INSTALL_PREFIX=$HOME/nestdaq \
+               -DCMAKE_PREFIX_PATH="/opt/nestdaq;$HOME/src/uhbook"\
+               -B ./build     -S .
+cd build
+make
+make install
+```
 
 ### igalashi/userworksコンパイルテスト
 
