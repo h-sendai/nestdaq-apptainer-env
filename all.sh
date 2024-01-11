@@ -1,5 +1,15 @@
 #!/bin/sh
 
+# dependencies changes
+# remove fmtlib
+# 
+# before 2024-01-11
+# :
+#./ZeroMQ.sh
+#./fmtlib.sh
+#./FairLogger.sh
+# :
+
 set -e
 
 HOME=/opt/nestdaq
@@ -35,7 +45,6 @@ make_home
 ./boost.sh
 ./cmake.sh
 ./ZeroMQ.sh
-./fmtlib.sh
 ./FairLogger.sh
 ./FairMQ.sh
 ./hiredis.sh
