@@ -139,8 +139,12 @@ make install
 https://github.com/igalashi/userworks
 にある。
 
+userworks/recbe/kolは先にコンパイルしておく必要がある。
+
 - git clone https://github.com/igalashi/userworks.git
 - cd userworks
+- cd recbe/kol; make 
+- cd ../..
 - cmake -DCMAKE_INSTALL_PREFIX=/opt/nestdaq -B build -S .
 - cd build
 - make
