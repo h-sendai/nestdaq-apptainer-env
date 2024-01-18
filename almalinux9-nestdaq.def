@@ -15,4 +15,4 @@ Include: yum
     yum -y update epel-release
     yum -y install screen htop 
     yum config-manager --enable crb
-    yum -y install root 'root-*'
+    yum -y install root 'root-*' astyle
