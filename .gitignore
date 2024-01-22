@@ -12,3 +12,4 @@ redis-plus-plus
 cmake-*.tar.gz
 almalinux9-nestdaq
 almalinux9-nestdaq.sif
+almalinux9-nestdaq.*.sif
